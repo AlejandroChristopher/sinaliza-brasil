@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -50,7 +51,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
-            Produção própria, amplo estoque e atendimento comercial rápido.
+            Fabricação própria, amplo estoque e atendimento comercial rápido.
             Enviamos placas de sinalização para todos os estados do Brasil.
           </p>
 
@@ -106,7 +107,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="relative mx-auto w-full max-w-xl"
         >
-          <div className="relative min-h-[500px] overflow-hidden rounded-[2rem] bg-slate-950 p-6 shadow-2xl sm:p-10">
+          <div className="relative min-h-[540px] overflow-hidden rounded-[2rem] bg-slate-950 p-5 shadow-2xl sm:p-8">
             <div
               aria-hidden="true"
               className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-red-600/30 blur-3xl"
@@ -117,73 +118,74 @@ export default function Hero() {
               className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-green-500/20 blur-3xl"
             />
 
-            <div className="relative z-10 flex h-full min-h-[420px] items-center justify-center">
-              <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="absolute left-0 top-12 w-52 -rotate-6 rounded-xl border-4 border-white bg-red-600 p-5 text-center text-white shadow-2xl sm:w-60"
-              >
-                <div className="text-sm font-black uppercase tracking-widest">
-                  Extintor
-                </div>
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="absolute left-5 top-8 z-10 h-60 w-[68%] p-2 drop-shadow-2xl sm:left-8"
+            >
+              <div className="relative h-full w-full">
+                <Image
+                  src="/produtos/Extintor.png"
+                  alt="Placas de sinalização para extintor à pronta entrega"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 70vw, 380px"
+                  className="object-contain"
+                />
+              </div>
+            </motion.div>
 
-                <div className="mt-3 text-5xl">↓</div>
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{
+                duration: 4.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="absolute right-5 top-[245px] z-20 h-44 w-[66%] p-2 drop-shadow-2xl sm:right-8"
+            >
+              <div className="relative h-full w-full">
+                <Image
+                  src="/produtos/Nova_S1.png"
+                  alt="Placa fotoluminescente de saída de emergência para a direita"
+                  fill
+                  sizes="(max-width: 768px) 68vw, 370px"
+                  className="object-contain"
+                />
+              </div>
+            </motion.div>
 
-                <div className="mt-2 text-xs font-semibold uppercase">
-                  Equipamento de combate a incêndio
-                </div>
-              </motion.div>
+            <motion.div
+              animate={{ y: [0, -6, 0] }}
+              transition={{
+                duration: 3.8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="absolute bottom-8 left-5 z-30 h-40 w-[63%] p-2 drop-shadow-2xl sm:left-8"
+            >
+              <div className="relative h-full w-full">
+                <Image
+                  src="/produtos/S12.png"
+                  alt="Conjunto de placas fotoluminescentes com indicação de saída"
+                  fill
+                  sizes="(max-width: 768px) 65vw, 350px"
+                  className="object-contain"
+                />
+              </div>
+            </motion.div>
 
-              <motion.div
-                animate={{ y: [0, 10, 0] }}
-                transition={{
-                  duration: 4.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="absolute right-0 top-40 w-60 rotate-6 rounded-xl border-4 border-white bg-green-600 p-5 text-white shadow-2xl sm:w-72"
-              >
-                <div className="flex items-center justify-center gap-4">
-                  <span className="text-4xl">←</span>
-
-                  <div>
-                    <div className="text-xl font-black uppercase">Saída</div>
-
-                    <div className="text-xs font-semibold uppercase">
-                      Rota de fuga
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                animate={{ y: [0, -6, 0] }}
-                transition={{
-                  duration: 3.8,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="absolute bottom-8 left-12 w-56 -rotate-2 rounded-xl border-4 border-white bg-green-700 p-5 text-center text-white shadow-2xl sm:left-20 sm:w-64"
-              >
-                <div className="text-sm font-black uppercase tracking-wider">
-                  Saída de emergência
-                </div>
-
-                <div className="mt-3 text-4xl">↑</div>
-              </motion.div>
-            </div>
-
-            <div className="absolute bottom-5 right-5 z-20 rounded-2xl bg-white p-4 shadow-xl">
+            <div className="absolute bottom-5 right-5 z-40 rounded-2xl bg-white px-4 py-3 shadow-xl">
               <p className="text-xs font-bold uppercase tracking-wider text-red-600">
                 Sinaliza Brasil
               </p>
 
               <p className="mt-1 text-sm font-bold text-slate-900">
-                Estoque à pronta entrega
+                Produtos à pronta entrega
               </p>
             </div>
           </div>
