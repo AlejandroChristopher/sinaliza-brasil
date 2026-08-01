@@ -16,7 +16,7 @@ const benefits = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-transparent pb-20 pt-44 lg:pb-28 lg:pt-52">
+    <section className="relative overflow-hidden bg-slate-950 pb-20 pt-44 lg:pb-28 lg:pt-52">
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2 lg:gap-20">
         <motion.div
           initial={{ opacity: 0, x: -35 }}
@@ -28,7 +28,7 @@ export default function Hero() {
             Fabricante com pronta entrega
           </div>
 
-          <h1 className="mt-8 text-5xl font-bold leading-[1.12] text-white sm:text-6xl lg:text-7xl">
+          <h1 className="mt-8 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-7xl">
             Placas de sinalização{" "}
             <span className="text-red-500">fotoluminescentes</span> para
             empresas e revendas
