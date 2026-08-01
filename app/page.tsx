@@ -1,7 +1,9 @@
 import Header from "@/components/layout/Header";
-import Hero from "@/components/sections/Hero";
 import Benefits from "@/components/sections/Benefits";
+import Hero from "@/components/sections/Hero";
 import Products from "@/components/sections/Products";
+import WhyUs from "@/components/sections/WhyUs";
+import FloatingWhatsapp from "@/components/shared/FloatingWhatsapp";
 
 export default function Home() {
   return (
@@ -12,7 +14,10 @@ export default function Home() {
         <Hero />
         <Benefits />
         <Products />
+        <WhyUs />
       </main>
+
+      <FloatingWhatsapp />
     </>
   );
 }
