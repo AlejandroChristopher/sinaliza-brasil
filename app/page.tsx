@@ -5,6 +5,7 @@ import Products from "@/components/sections/Products";
 import WhyUs from "@/components/sections/WhyUs";
 import FloatingWhatsapp from "@/components/shared/FloatingWhatsapp";
 import Process from "@/components/sections/Process";
+import CTA from "@/components/sections/CTA";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Products />
         <WhyUs />
         <Process />
+        <CTA />
       </main>
 
       <FloatingWhatsapp />
