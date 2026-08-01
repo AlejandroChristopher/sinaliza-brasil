@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { CircleSlash, ShieldAlert, TriangleAlert } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 const featuredProducts = [
@@ -41,26 +40,12 @@ const featuredProducts = [
     image: "/produtos/Rodape.png",
     alt: "Placas de direção para rota de fuga",
   },
-];
-
-const additionalCategories = [
   {
-    title: "Identificação de equipamentos",
+    title: "Outros modelos e personalizados",
     description:
-      "Placas para identificação de equipamentos e recursos de emergência.",
-    icon: ShieldAlert,
-  },
-  {
-    title: "Placas de alerta",
-    description:
-      "Avisos para áreas de risco, atenção e procedimentos de segurança.",
-    icon: TriangleAlert,
-  },
-  {
-    title: "Placas de proibição",
-    description:
-      "Sinalização para indicar ações, acessos e comportamentos proibidos.",
-    icon: CircleSlash,
+      "Consulte outros modelos, medidas e placas personalizadas de acordo com a necessidade da sua empresa.",
+    image: "/produtos/Outros.png",
+    alt: "Outros modelos e placas de sinalização personalizadas",
   },
 ];
 
@@ -138,71 +123,19 @@ export default function Products() {
           ))}
         </div>
 
-        <div className="mt-16">
-          <div className="mb-8 text-center">
-            <h3 className="text-2xl font-bold text-slate-900">
-              Outras categorias disponíveis
-            </h3>
-
-            <p className="mt-3 text-slate-600">
-              Consulte nossa equipe para conhecer outros modelos, tamanhos e
-              aplicações.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {additionalCategories.map((category, index) => (
-              <motion.article
-                key={category.title}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.08,
-                }}
-                viewport={{
-                  once: true,
-                  amount: 0.2,
-                }}
-                className="rounded-2xl border border-slate-200 bg-white p-7 transition hover:border-red-200 hover:shadow-lg"
-              >
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-red-100">
-                  <category.icon size={28} className="text-red-600" />
-                </div>
-
-                <h4 className="mt-6 text-xl font-bold text-slate-900">
-                  {category.title}
-                </h4>
-
-                <p className="mt-3 leading-7 text-slate-600">
-                  {category.description}
-                </p>
-
-                <a
-                  href={createWhatsappUrl(category.title)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-5 inline-flex font-semibold text-red-600 transition hover:text-red-700"
-                >
-                  Consultar disponibilidade →
-                </a>
-              </motion.article>
-            ))}
-          </div>
-        </div>
-
         <div className="mt-16 rounded-3xl bg-slate-950 px-6 py-12 text-center text-white md:px-12">
           <h3 className="text-3xl font-bold">
             Não encontrou o modelo que procura?
           </h3>
 
           <p className="mx-auto mt-4 max-w-2xl leading-7 text-slate-300">
-            Fale com nossa equipe e informe o código, modelo, medida ou
-            quantidade desejada.
+            Produzimos outros modelos, tamanhos e placas personalizadas. Informe
+            o código, a medida, a quantidade ou envie uma referência para nossa
+            equipe.
           </p>
 
           <a
-            href={createWhatsappUrl("outros modelos de placas")}
+            href={createWhatsappUrl("outros modelos ou placas personalizadas")}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-7 inline-flex items-center gap-3 rounded-xl bg-green-500 px-7 py-4 font-bold text-white transition hover:scale-[1.02] hover:bg-green-600"
