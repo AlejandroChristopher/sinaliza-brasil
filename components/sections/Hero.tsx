@@ -1,8 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, PackageCheck } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Eye,
+  PackageCheck,
+  RotateCcw,
+} from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 const whatsappUrl =
@@ -15,8 +22,10 @@ const benefits = [
 ];
 
 export default function Hero() {
+  const [showGlow, setShowGlow] = useState(false);
+
   return (
-    <section className="relative overflow-hidden bg-slate-950 pb-20 pt-44 lg:pb-28 lg:pt-52">
+    <section className="relative overflow-hidden bg-slate-950 pb-20 pt-40 lg:pb-28 lg:pt-52">
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2 lg:gap-20">
         <motion.div
           initial={{ opacity: 0, x: -35 }}
@@ -89,7 +98,7 @@ export default function Hero() {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="relative h-[390px] w-full sm:h-[500px] lg:h-[580px]"
+            className="relative h-[340px] w-full sm:h-[500px] lg:h-[580px]"
           >
             <Image
               src="/produtos/placas-rota-fuga.png"
@@ -97,7 +106,9 @@ export default function Hero() {
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-contain mix-blend-multiply brightness-125 contrast-125 drop-shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:opacity-0"
+              className={`object-contain mix-blend-multiply brightness-125 contrast-125 drop-shadow-2xl transition-all duration-500 ${
+                showGlow ? "scale-105 opacity-0" : "opacity-100"
+              } lg:group-hover:scale-105 lg:group-hover:opacity-0`}
             />
 
             <Image
@@ -105,13 +116,38 @@ export default function Hero() {
               alt="Placas de rota de fuga brilhando no escuro"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-contain opacity-0 mix-blend-screen drop-shadow-[0_0_35px_rgba(163,255,103,0.35)] transition-all duration-500 group-hover:scale-105 group-hover:opacity-100"
+              className={`object-contain mix-blend-screen drop-shadow-[0_0_35px_rgba(163,255,103,0.35)] transition-all duration-500 ${
+                showGlow ? "scale-105 opacity-100" : "opacity-0"
+              } lg:group-hover:scale-105 lg:group-hover:opacity-100`}
             />
           </motion.div>
 
-          <p className="mt-2 text-center text-sm text-slate-500">
+          <button
+            type="button"
+            onClick={() => setShowGlow((current) => !current)}
+            aria-pressed={showGlow}
+            className="mx-auto mt-4 flex items-center justify-center gap-2 rounded-xl border border-emerald-400/40 bg-emerald-500/10 px-5 py-3 font-bold text-emerald-300 transition active:scale-95 lg:hidden"
+          >
+            {showGlow ? (
+              <>
+                <RotateCcw size={20} />
+                Ver placa com luz
+              </>
+            ) : (
+              <>
+                <Eye size={20} />
+                Ver efeito fotoluminescente
+              </>
+            )}
+          </button>
+
+          <p className="mt-3 hidden text-center text-sm text-slate-500 lg:block">
             Passe o mouse sobre as placas para visualizar o efeito
             fotoluminescente.
+          </p>
+
+          <p className="mt-3 text-center text-sm text-slate-500 lg:hidden">
+            Toque no botão para comparar a placa com e sem iluminação.
           </p>
         </motion.div>
       </div>
