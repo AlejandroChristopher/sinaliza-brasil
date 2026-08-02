@@ -78,12 +78,12 @@ export default function Footer() {
             </a>
 
             <a
-              href="mailto:sinalizabrasiloficial@gmail.com"
+              href="mailto:Sinaliza.brasil@icloud.com"
               className="flex items-start gap-3 break-all transition-colors hover:text-white"
             >
               <Mail size={20} className="mt-0.5 shrink-0 text-red-500" />
 
-              <span>sinalizabrasiloficial@gmail.com</span>
+              <span>Sinaliza.brasil@icloud.com</span>
             </a>
 
             <div className="flex items-start gap-3">
