@@ -26,17 +26,7 @@ export default function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-slate-950 pb-20 pt-40 lg:pb-28 lg:pt-52">
-      <div
-        aria-hidden="true"
-        className="absolute left-0 top-1/3 h-80 w-80 rounded-full bg-red-600/10 blur-[120px]"
-      />
-
-      <div
-        aria-hidden="true"
-        className="absolute right-0 top-1/4 h-96 w-96 rounded-full bg-emerald-500/10 blur-[140px]"
-      />
-
-      <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2 lg:gap-20">
+      <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2 lg:gap-20">
         <motion.div
           initial={{ opacity: 0, x: -35 }}
           animate={{ opacity: 1, x: 0 }}
@@ -76,7 +66,7 @@ export default function Hero() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 rounded-xl bg-green-500 px-7 py-4 font-bold text-white shadow-lg shadow-green-500/15 transition duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:bg-green-600 hover:shadow-green-500/30"
+              className="inline-flex items-center justify-center gap-3 rounded-xl bg-green-500 px-7 py-4 font-bold text-white transition hover:-translate-y-0.5 hover:bg-green-600"
             >
               <FaWhatsapp size={24} />
               Solicitar orçamento
@@ -84,7 +74,7 @@ export default function Hero() {
 
             <a
               href="#produtos"
-              className="inline-flex items-center justify-center gap-3 rounded-xl border border-slate-700 px-7 py-4 font-bold text-white transition duration-300 hover:-translate-y-1 hover:border-red-500 hover:text-red-400"
+              className="inline-flex items-center justify-center gap-3 rounded-xl border border-slate-700 px-7 py-4 font-bold text-white transition hover:border-red-500 hover:text-red-400"
             >
               Conhecer produtos
               <ArrowRight size={20} />
@@ -100,15 +90,15 @@ export default function Hero() {
         >
           <motion.div
             animate={{
-              y: [0, -12, 0],
-              rotate: [0, 0.4, 0],
+              y: [0, -13, 0],
+              rotate: [0, 0.5, 0],
             }}
             transition={{
               duration: 5,
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="relative h-[340px] w-full overflow-hidden sm:h-[500px] lg:h-[580px]"
+            className="relative h-[340px] w-full sm:h-[500px] lg:h-[580px]"
           >
             <Image
               src="/produtos/placas-rota-fuga.png"
@@ -129,36 +119,6 @@ export default function Hero() {
               className={`object-contain mix-blend-screen drop-shadow-[0_0_35px_rgba(163,255,103,0.35)] transition-all duration-500 ${
                 showGlow ? "scale-105 opacity-100" : "opacity-0"
               } lg:group-hover:scale-105 lg:group-hover:opacity-100`}
-            />
-
-            <motion.div
-              aria-hidden="true"
-              initial={{ x: "-180%", opacity: 0 }}
-              animate={{
-                x: ["-180%", "220%"],
-                opacity: [0, 0.75, 0],
-              }}
-              transition={{
-                duration: 1.8,
-                repeat: Infinity,
-                repeatDelay: 6,
-                ease: "easeInOut",
-              }}
-              className="pointer-events-none absolute inset-y-[12%] z-20 w-28 rotate-12 bg-gradient-to-r from-transparent via-emerald-200/35 to-transparent blur-xl"
-            />
-
-            <motion.div
-              aria-hidden="true"
-              animate={{
-                opacity: [0.15, 0.35, 0.15],
-                scale: [0.96, 1.03, 0.96],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="pointer-events-none absolute inset-[16%] -z-10 rounded-full bg-emerald-400/20 blur-[70px]"
             />
           </motion.div>
 
