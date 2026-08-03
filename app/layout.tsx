@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import WhatsAppTracking from "@/components/analytics/WhatsAppTracking";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -173,6 +174,8 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body>
         {children}
+
+        <WhatsAppTracking />
 
         <script
           type="application/ld+json"
