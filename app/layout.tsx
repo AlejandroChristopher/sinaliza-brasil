@@ -5,6 +5,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
 
+  verification: {
+    google: "8tEEN8ZXi90FZpE1T",
+  },
+
   title: {
     default: "Sinaliza Brasil | Fabricante de Placas Fotoluminescentes",
     template: "%s | Sinaliza Brasil",
