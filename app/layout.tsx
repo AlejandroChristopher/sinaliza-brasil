@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -186,6 +187,8 @@ export default function RootLayout({
             __html: JSON.stringify(websiteSchema).replace(/</g, "\\u003c"),
           }}
         />
+
+        <GoogleAnalytics gaId="G-LGE7869TVD" />
       </body>
     </html>
   );
