@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
 
   verification: {
-    google: "8tEEN8ZXi90FZpE1T",
+    google: "8tEEN8ZXi90FZpE1TQZUIsSJK0ugeR3djJJu-u2ZBtc",
   },
 
   title: {
