@@ -96,13 +96,27 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-slate-800">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-6 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-6 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
           <p>
             © {new Date().getFullYear()} Sinaliza Brasil. Todos os direitos
             reservados.
           </p>
 
-          <p>Fabricante com atendimento em todo o Brasil.</p>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <Link
+              href="/politica-de-privacidade"
+              className="transition-colors hover:text-white"
+            >
+              Política de Privacidade
+            </Link>
+
+            <Link
+              href="/termos-de-uso"
+              className="transition-colors hover:text-white"
+            >
+              Termos de Uso
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
