@@ -1,3 +1,4 @@
+import StructuredData from "@/components/seo/StructuredData";
 import type { Metadata, Viewport } from "next";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
@@ -103,19 +104,16 @@ const organizationSchema = {
   "@id": `${siteConfig.url}/#organization`,
 
   name: "Sinaliza Brasil",
-
   url: siteConfig.url,
 
   logo: `${siteConfig.url}/logo-sinaliza-brasil-branca.png`,
-
-  image: `${siteConfig.url}/opengraph-image`,
+  image: `${siteConfig.url}/opengraph-image.png`,
 
   description:
     "Fabricante de placas de sinalização fotoluminescentes com amplo estoque à pronta entrega e envio para todo o Brasil.",
 
   email: "mailto:Sinaliza.brasil@icloud.com",
-
-  telephone: "+55 19 97119-0564",
+  telephone: "+5519971190564",
 
   address: {
     "@type": "PostalAddress",
@@ -131,10 +129,10 @@ const organizationSchema = {
 
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+55 19 97119-0564",
+    telephone: "+5519971190564",
     contactType: "sales",
     areaServed: "BR",
-    availableLanguage: "Portuguese",
+    availableLanguage: ["pt-BR"],
   },
 
   knowsAbout: [
@@ -153,11 +151,8 @@ const websiteSchema = {
   "@id": `${siteConfig.url}/#website`,
 
   name: "Sinaliza Brasil",
-
   url: siteConfig.url,
-
   description: siteConfig.description,
-
   inLanguage: "pt-BR",
 
   publisher: {
