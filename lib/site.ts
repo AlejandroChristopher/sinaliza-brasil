@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Sinaliza Brasil",
 
-  url: "https://sinaliza-brasil.vercel.app/",
+  url: "https://www.sinalizabrasil.ind.br",
 
   description:
     "Fabricante de placas de sinalização fotoluminescentes com pronta entrega e envio para todo o Brasil.",
